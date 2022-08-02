@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import './App.css'
-import CardsBox from './components/CardsBox'
-import Header from './components/Header'
-import Search from './components/search'
+import CardsBox from './components/CardsBox.jsx'
+import Header from './components/Header.jsx'
+import Search from './components/search.jsx'
 
 function App() {
   const [randomPlanet, setRandomPlanet] = useState()
