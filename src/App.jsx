@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import CardsBox from './components/CardsBox.jsx'
 import Header from './components/Header.jsx'
-import Search from './components/search.jsx'
+import Search from './components/Search'
 
 function App() {
   const [randomPlanet, setRandomPlanet] = useState()
