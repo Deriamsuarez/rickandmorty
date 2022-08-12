@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import useFetch from '../hooks/useFetch'
 
 const Card = ({ resident }) => {
 
-  const alien = useFetch(resident)
+  const [hola, setHola] = useState(resident)
 
-console.log(alien)
+  const alien = useFetch(hola)
 
   return (
     <div className="card Character">

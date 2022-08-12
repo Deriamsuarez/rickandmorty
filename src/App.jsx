@@ -18,7 +18,7 @@ function App() {
       <Header />
       <section id='main'>
       {planet &&  <Search planet={planet} />}
-        {planet && <CardsBox planet={planet} residents={planet.residents} />}
+        {planet && <CardsBox planet={planet} />}
       </section>
     </div>
   )
