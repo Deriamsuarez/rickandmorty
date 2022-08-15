@@ -131,8 +131,14 @@ li {
   justify-content: center;
   gap: 2em;
   width: 100%;
-
   flex-wrap: wrap;
+}
+
+.Character:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+  margin: 0 2em;
+  
 }
 
 .headerCard {
@@ -148,6 +154,8 @@ li {
   /* height: 400px; */
   border: 3px solid;
   border-color: var(--principal);
+  transition: 0.5s;
+
 }
 
 .userInfo {
@@ -199,3 +207,20 @@ img {
   flex-direction: column;
   width: 100%;
 }
+
+.pagination{
+  /* border: 1px dashed black; */
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+}
+
+.pagination > input{
+width: 50px;
+border: none;
+font-size: 25px;
+font-weight: 600;
+color: var(--principal);
+text-align: center;
+}
+

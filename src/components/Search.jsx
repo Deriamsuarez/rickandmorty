@@ -21,7 +21,7 @@ const Search = ({ setNumber, numRandom }) => {
   return (
     <form onSubmit={handdleInput}>
       <div className='searchContainer'>
-        <input id='search' className='input' type='number' placeholder='Search a location by #' onChange={handdleInput} />
+        <input id='search' className='input' type='number' placeholder='Search a location by #' />
       </div>
     </form>
   )
