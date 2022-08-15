@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Location = ({planet}) => {
+
   return (
     <section className='headerCards'>
     <div className="planetName">{planet?.name}</div>

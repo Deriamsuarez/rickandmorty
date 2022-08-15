@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './App.css'
 import CardsBox from './components/CardsBox'
 import Header from './components/Header'
@@ -7,18 +7,18 @@ import Search from './components/Search'
 import useFetch from './hooks/useFetch'
 
 function App() {
+  let numRandom = Math.floor(Math.random() * 126)
 
-  let num = Math.floor(Math.random() * 126)
+  const [number, setNumber] = useState(numRandom)
 
-  const planet = useFetch(`https://rickandmortyapi.com/api/location/${num}`)
-
+  const planet = useFetch(`https://rickandmortyapi.com/api/location/${number}`, number)
 
   return (
     <div className="App">
       <Header />
       <section id='main'>
-      {planet &&  <Search planet={planet} />}
-        {planet && <CardsBox planet={planet} />}
+        {planet && <Search planet={planet} setNumber={setNumber} numRandom={numRandom}  />}
+        {planet && <CardsBox planet={planet} number={number} />}
       </section>
     </div>
   )

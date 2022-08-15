@@ -1,26 +1,29 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Search = () => {
-  const [search, setSearch] = useState(``)
+const Search = ({ setNumber, numRandom }) => {
+  const [search, setSearch] = useState('')
 
+  
   const handdleInput = e => {
+    e.preventDefault()
 
-    setSearch(e.target.value);
-  }
-  if (search === 'gen16') {
-    setSearch("soy alumno de academlo")
+    if(e.target.value == '' ){
+      setSearch(e.target.search.value)
+      setNumber(numRandom)
+
+    }else{
+      setSearch(e.target.search.value)
+      setNumber(e.target.search.value)
+    }
   }
 
-  console.log(search)
   return (
-    <form>
+    <form onSubmit={handdleInput}>
       <div className='searchContainer'>
-        <input className='input' type='text' value={search} onChange={handdleInput} />
-        <button className='buttonSubmit' type="submit"><i className="fi fi-rr-search"></i></button>
+        <input id='search' className='input' type='number' placeholder='Search a location by #' onChange={handdleInput} />
       </div>
     </form>
-
   )
 }
 

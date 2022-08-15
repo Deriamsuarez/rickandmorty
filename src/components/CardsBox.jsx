@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
-import useFetch from '../hooks/useFetch'
+import React from 'react'
 import ResidentInfo from './ResidentInfo'
 import Location from './Location'
 
-const CardsBox = ({ planet }) => {
+const CardsBox = ({ planet, number }) => {
 
   return (
     <div id='cardsBox'>
-
       <section id='cardContainer'>
         <Location planet={planet} />
-        {planet && planet.residents.map((resident, index) =>
-          <ResidentInfo key={index} resident={resident} />)}
+        {planet && planet.residents.map((resident) =>
+          <ResidentInfo key={resident} resident={resident} number={number} />)}
       </section>
     </div>
   )
