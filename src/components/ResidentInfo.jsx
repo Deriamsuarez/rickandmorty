@@ -32,9 +32,9 @@ const Card = ({ resident, number }) => {
         <span className='status'><div className="alive" style={{backgroundColor: bgColor}}/> <strong >{alien?.status}</strong></span>
         <h3>{alien?.name}</h3>
         <span>origin</span>
-        <span>{alien?.origin.name}</span>
+        <span><strong>{alien?.origin.name}</strong></span>
         <span>Episodes where appear</span>
-        <span>{alien?.episode.length}</span>
+        <span><strong>{alien?.episode.length}</strong></span>
       </div>
     </div>
   )
